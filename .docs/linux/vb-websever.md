@@ -93,7 +93,7 @@ sudo apt update
 sudo apt install mysql-server-5.7
 ```
 
-# PHPmyAdmin
+## PHPmyAdmin
 
 Устанавливаем PHPmyAdmin
 
@@ -131,14 +131,14 @@ sudo systemctl set-default multi-user.target
 sudo systemctl set-default graphical.target
 ```
 
-# Включаем mod_rewrite
+## Включаем mod_rewrite
 
 ```
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
 
-# Настройка общей папки
+## Настройка общей папки
 
 Настраиваем VirtualBox:
 
@@ -199,7 +199,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 
 Настройка общей папки закончена, далее отключаем "Диск дополнений гостевой ОС".
 
-# Настраиваем доступ к MySQL с host машины
+## Настраиваем доступ к MySQL с host машины
 
 ```
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -243,7 +243,7 @@ update user set host='%' where user='root';
 flush privileges;
 ```
 
-# Добавление виртуальных хостов (доменов)
+## Добавление виртуальных хостов (доменов)
 
 Устанавливаем права на папку sites-available
 
@@ -284,3 +284,10 @@ service apache2 restart
 ```
 sudo nano /etc/hosts
 ```
+
+## Статьи
+
+* [Мастерим собственный локальный веб-сервер на VirtualBox](http://falbar.ru/article/masterim-sobstvennyj-lokalnyj-veb-server-na-virtualbox);
+* [Устанавливаем Apache, PHP, MySQL и PHPMyAdmin на Linux](http://falbar.ru/article/ustanavlivaem-apache-php-mysql-i-phpmyadmin-na-linux);
+* [Настраиваем общую папку на VirtualBox для локального веб-сервера](http://falbar.ru/article/nastraivaem-obshhuyu-papku-na-virtualbox-dlya-lokalnogo-veb-servera);
+* [Настраиваем доступ к MySQL на VirtualBox из HOST машины](http://falbar.ru/article/nastraivaem-dostup-k-mysql-na-virtualbox-iz-host-mashiny).
