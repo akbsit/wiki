@@ -32,3 +32,5 @@
     * [Полезные программы](.docs/linux/tools.md);
     * [Установка и настройка веб-сервера на VirtualBox](.docs/linux/vb-websever.md);
     * [Книги](.docs/linux/books.md).
+* Bitrix:
+    * [Скрипт предназначен для продления демонстрационной версии сайта](.docs/bitrix/bx_reset-demo.php).
