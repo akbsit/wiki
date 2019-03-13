@@ -33,4 +33,5 @@
     * [Установка и настройка веб-сервера на VirtualBox](.docs/linux/vb-websever.md);
     * [Книги](.docs/linux/books.md).
 * Bitrix:
-    * [Скрипт предназначен для продления демонстрационной версии сайта](.docs/bitrix/bx_reset-demo.php).
+    * [bx_auth-admin.php](.docs/bitrix/bx_auth-admin.php) - скрипт предназначен для авторизации под админом;
+    * [bx_reset-demo.php](.docs/bitrix/bx_reset-demo.php) - скрипт предназначен для продления демонстрационной версии сайта.
