@@ -27,7 +27,10 @@
 * Linux:
     * Linux команды:
         * [Общие команды](.docs/linux/command/common.md);
-        * [Полезные команды](.docs/linux/command/useful.md).
+        * [Полезные команды](.docs/linux/command/useful.md);
+        * [Копирование](.docs/linux/command/copy.md);
+        * [Поиск](.docs/linux/command/search.md);
+        * [Проверка версий](.docs/linux/command/version-check.md).
     * [Комбинации клавиш](.docs/linux/key-combination.md);
     * [Полезные программы](.docs/linux/tools.md);
     * [Установка и настройка веб-сервера на VirtualBox](.docs/linux/vb-websever.md);

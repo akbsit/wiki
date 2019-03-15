@@ -1,31 +1,19 @@
 # Полезные команды
 
-Версия apache (Ubuntu)
-
-```
-apache2 –v
-```
-
-Версия apache (Centos)
-
-```
-httpd -v
-```
-
-Версия php
-
-```
-php –v
-```
-
-Версия mysql
-
-```
-mysql --version
-```
-
 Узнать установление пакеты PHP
 
 ```
 dpkg --get-selections | grep -v deinstall | grep php<версия>
+```
+
+Очистить папку
+
+```
+rm -rf <путь до папки>/*
+```
+
+Выполнение PHP скрипта с настройками (пример)
+
+```
+php -d short_open_tag=On vendor/bin/phinx status
 ```
