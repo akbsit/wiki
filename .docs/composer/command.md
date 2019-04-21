@@ -5,3 +5,9 @@
 ```
 composer dump-autoload -o
 ```
+
+Удалить пакет
+
+```
+composer remove <название пакета>
+```

@@ -35,6 +35,7 @@
     * [Полезные программы](.docs/linux/tools.md);
     * [Установка и настройка веб-сервера на VirtualBox](.docs/linux/vb-websever.md);
     * [Книги](.docs/linux/books.md).
+* [Регулярные выражения](.docs/regexp/regexp.md);
 * Bitrix:
     * [Сгенерированный SQL запрос, D7](.docs/bitrix/sql.md);
     * [bx_auth-admin.php](.docs/bitrix/bx_auth-admin.php) - скрипт предназначен для авторизации под админом;
