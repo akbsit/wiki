@@ -13,3 +13,9 @@
 ```
 
 > [ссылка на источник решения](https://stackoverflow.com/questions/4897353/regex-to-disallow-more-than-1-dash-consecutively)
+
+Получение в строке первого предложения
+
+```
+/^[^.]+/
+```
