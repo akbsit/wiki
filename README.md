@@ -38,5 +38,6 @@
 * [Регулярные выражения](.docs/regexp/regexp.md);
 * Bitrix:
     * [Сгенерированный SQL запрос, D7](.docs/bitrix/sql.md);
+    * [Переопределение кастомной отправки почты через SMTP](.docs/bitrix/custom-mail.md);
     * [bx_auth-admin.php](.docs/bitrix/bx_auth-admin.php) - скрипт предназначен для авторизации под админом;
     * [bx_reset-demo.php](.docs/bitrix/bx_reset-demo.php) - скрипт предназначен для продления демонстрационной версии сайта.
