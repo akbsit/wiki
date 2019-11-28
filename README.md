@@ -23,7 +23,8 @@
         * [Работа с тегами](.docs/git/command/tags.md);
         * [Настройки](.docs/git/command/settings.md).
     * [Настройка GIT на сервере (на примере timeweb)](.docs/git/timeweb-server.md);
-    * [Настройка SSH подключения (на примере timeweb)](.docs/git/timeweb-ssh.md).
+    * [Настройка SSH подключения (на примере timeweb)](.docs/git/timeweb-ssh.md);
+    * [Настройка GIT hook pre-push для отправки в несколько репозиториев](.docs/git/hook-pre-push.md).
 * Linux:
     * Linux команды:
         * [Общие команды](.docs/linux/command/common.md);
