@@ -1,24 +1,24 @@
 # Проверка версий
 
-Версия apache (Ubuntu)
+Версия apache (Ubuntu):
 
 ```
 apache2 –v
 ```
 
-Версия apache (Centos)
+Версия apache (Centos):
 
 ```
 httpd -v
 ```
 
-Версия php
+Версия php:
 
 ```
 php –v
 ```
 
-Версия mysql
+Версия mysql:
 
 ```
 mysql --version

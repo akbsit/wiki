@@ -12,6 +12,8 @@
     * [NPM команды](.docs/npm/command.md).
 * CMD:
     * [CMD команды](.docs/cmd/command.md).
+* Phinx:
+    * [Phinx команды](.docs/phinx/command.md).
 * GIT:
     * GIT команды:
         * [Общие команды](.docs/git/command/common.md);
@@ -42,5 +44,6 @@
 * Bitrix:
     * [Сгенерированный SQL запрос, D7](.docs/bitrix/sql.md);
     * [Переопределение кастомной отправки почты через SMTP](.docs/bitrix/custom-mail.md);
+    * [Настройка миграций через Phinx](.docs/bitrix/phinx.md);
     * [bx_auth-admin.php](.docs/bitrix/bx_auth-admin.php) - скрипт предназначен для авторизации под админом;
     * [bx_reset-demo.php](.docs/bitrix/bx_reset-demo.php) - скрипт предназначен для продления демонстрационной версии сайта.
