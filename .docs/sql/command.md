@@ -1,12 +1,12 @@
 # SQL команды
 
-Список баз данных
+Список баз данных:
 
 ```
 SHOW DATABASES;
 ```
 
-Посмотреть пользователей MySQL
+Посмотреть пользователей MySQL:
 
 ```
 SELECT user, host FROM mysql.user;

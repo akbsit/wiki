@@ -1,12 +1,12 @@
 # Composer команды
 
-Обновить зависимости в autoload
+Обновить зависимости в autoload:
 
 ```
 composer dump-autoload -o
 ```
 
-Удалить пакет
+Удалить пакет:
 
 ```
 composer remove <название пакета>
