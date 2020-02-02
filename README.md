@@ -34,11 +34,11 @@
         * [Копирование](.docs/linux/command/copy.md);
         * [Поиск](.docs/linux/command/search.md);
         * [Проверка версий](.docs/linux/command/version-check.md).
-    * [Комбинации клавиш](.docs/linux/key-combination.md);
     * [Полезные программы](.docs/linux/tools.md);
     * [Установка и настройка веб-сервера на VirtualBox](.docs/linux/vb-websever.md);
     * [Книги](.docs/linux/books.md).
 * Docker:
+    * [Docker команды](.docs/docker/command.md);
     * [Установка и настройка веб-сервера](.docs/docker/websever.md).
 * [Регулярные выражения](.docs/regexp/regexp.md);
 * Bitrix:
