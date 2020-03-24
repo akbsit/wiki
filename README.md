@@ -46,6 +46,8 @@
     * [Настройка миграций через Phinx](.docs/bitrix/phinx.md);
     * [bx_auth-admin.php](.docs/bitrix/bx_auth-admin.php) - скрипт предназначен для авторизации под админом;
     * [bx_reset-demo.php](.docs/bitrix/bx_reset-demo.php) - скрипт предназначен для продления демонстрационной версии сайта.
+* Laravel:
+    * [view-sql.php](.docs/laravel/view-sql.php) - просмотр SQL запросов.
 * PHP:
     * [Сортировка многомерного массива](.docs/php/array-multisort.md);
 * [Регулярные выражения](.docs/regexp/regexp.md);
