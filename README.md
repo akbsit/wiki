@@ -39,7 +39,7 @@
     * [Книги](.docs/linux/books.md).
 * Docker:
     * [Docker команды](.docs/docker/command.md);
-    * [Установка и настройка веб-сервера](.docs/docker/websever.md).
+    * [Установка и настройка веб-сервера](https://github.com/falbarRu/docker-sever).
 * Bitrix:
     * [Сгенерированный SQL запрос, D7](.docs/bitrix/sql.md);
     * [Переопределение кастомной отправки почты через SMTP](.docs/bitrix/custom-mail.md);
