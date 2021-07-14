@@ -39,7 +39,8 @@
     * [Книги](.docs/linux/books.md).
 * Docker:
     * [Docker команды](.docs/docker/command.md);
-    * [Установка и настройка веб-сервера](https://github.com/falbarRu/docker-sever).
+    * [Установка и настройка веб-сервера](https://github.com/falbarRu/docker-sever);
+    * [docker-clear.sh](.docs/docker/docker-clear.sh) - скрипт предназначен для сброса всех данных докера.
 * Bitrix:
     * [Сгенерированный SQL запрос, D7](.docs/bitrix/sql.md);
     * [Переопределение кастомной отправки почты через SMTP](.docs/bitrix/custom-mail.md);
