@@ -2,7 +2,7 @@
 
 Устанавливаем пакет PHPMailer для работы с SMTP:
 
-```
+```bash
 composer require phpmailer/phpmailer
 ```
 

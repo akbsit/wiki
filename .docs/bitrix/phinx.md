@@ -2,7 +2,7 @@
 
 Для установки Phinx в консоли вводим в папке `/local/`:
 
-```
+```bash
 composer require robmorgan/phinx
 ```
 

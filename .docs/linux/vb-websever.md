@@ -31,7 +31,7 @@
 
 Устанавливаем сервер:
 
-```
+```bash
 sudo add-apt-repository -y ppa:ondrej/apache2
 sudo apt update
 sudo apt install apache2
@@ -39,7 +39,7 @@ sudo apt install apache2
 
 Добавляем файл считывания по умолчанию:
 
-```
+```bash
 sudo nano /etc/apache2/mods-enabled/dir.conf
 ```
 
@@ -49,7 +49,7 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 
 Устанавливаем PHP:
 
-```
+```bash
 sudo apt install python-software-properties
 sudo add-apt-repository -y ppa:ondrej/php-7.0
 sudo apt update
@@ -58,7 +58,7 @@ sudo apt install php7.0
 
 Устанавливаем PHP пакеты:
 
-```
+```bash
 sudo apt install libapache2-mod-php7.0
 sudo apt install php7.0-intl
 sudo apt install php7.0-cli
@@ -77,7 +77,7 @@ sudo apt install php7.0-mcrypt
 
 Проверяем работу PHP:
 
-```
+```bash
 sudo chmod -R 777 /var/www/
 ```
 
@@ -87,7 +87,7 @@ sudo chmod -R 777 /var/www/
 
 Устанавливаем MySQL:
 
-```
+```bash
 sudo add-apt-repository -y ppa:ondrej/mysql-5.7
 sudo apt update
 sudo apt install mysql-server-5.7
@@ -97,13 +97,13 @@ sudo apt install mysql-server-5.7
 
 Устанавливаем PHPmyAdmin:
 
-```
+```bash
 sudo apt install phpmyadmin
 ```
 
 Подключаем PHPmyAdmin к Apache:
 
-```
+```bash
 sudo nano /etc/apache2/apache2.conf
 ```
 
@@ -113,7 +113,7 @@ sudo nano /etc/apache2/apache2.conf
 
 Перезагружаем сервер:
 
-```
+```bash
 sudo service apache2 restart
 ```
 
@@ -121,19 +121,19 @@ sudo service apache2 restart
 
 Чтобы не тратить ресурсы на грфическую облочку можно отключить:
 
-```
+```bash
 sudo systemctl set-default multi-user.target
 ```
 
 Чтобы включить:
 
-```
+```bash
 sudo systemctl set-default graphical.target
 ```
 
 ## Включаем mod_rewrite
 
-```
+```bash
 sudo a2enmod rewrite
 sudo service apache2 restart
 ```
@@ -148,30 +148,30 @@ sudo service apache2 restart
 
 Устанавливаем необходимые пакеты на сервере:
 
-```
+```bash
 sudo apt install dkms build-essential linux-headers-generic
 ```
 
 Запускаем VBoxLinuxAdditions в папке с гостевым ПО:
 
-```
+```bash
 sudo sh ./VBoxLinuxAdditions.run
 ```
 
 Добавляем пользователя для работы с общей папкой:
 
-```
+```bash
 sudo adduser <имя пользователя на сервере> vboxsf
 sudo usermod -aG vboxsf www-data
 ```
 
 Настраиваем пути до общей папки, где будут размещаться сайты:
 
-```
+```bash
 sudo nano /etc/apache2/apache2.conf
 ```
 
-```
+```text
 #<Directory /var/www> 
 #…
 #</Directory>
@@ -179,7 +179,7 @@ sudo nano /etc/apache2/apache2.conf
 
 > Комментируем строки
 
-```
+```text
 <Directory /media/sf_public>
     Options Indexes FollowSymLinks MultiViews
     AllowOverride All
@@ -191,7 +191,7 @@ sudo nano /etc/apache2/apache2.conf
 
 > В конец файла добавляем
 
-```
+```bash
 sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
@@ -201,7 +201,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 
 ## Настраиваем доступ к MySQL с host машины
 
-```
+```bash
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
@@ -209,37 +209,37 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 
 Перезапускаем MySQL сервер:
 
-```
+```bash
 sudo service mysql restart
 ```
 
 Подключаемся к базе данных пользователем root через mysql-client:
 
-```
+```bash
 mysql -u root -p;
 ```
 
 Выбираем схему MySQL по умолчанию:
 
-```
+```sql
 use mysql;
 ```
 
 Выводим список всех хостов и пользователей базы данных:
 
-```
+```sql
 select host, user from user;
 ```
 
 Изменяем host для пользователя root: 
 
-```
+```sql
 update user set host='%' where user='root';
 ```
 
 Обновляем привелегии:
 
-```
+```sql
 flush privileges;
 ```
 
@@ -247,20 +247,20 @@ flush privileges;
 
 Устанавливаем права на папку sites-available:
 
-```
+```bash
 sudo chmod -R 777 /etc/apache2/sites-available/
 ```
 
 Добавляем домен:
 
-```
+```bash
 sudo cd /etc/apache2/sites-available/
 sudo nano test.loc.conf
 ```
 
 Содержимое файла test.loc.conf:
 
-```
+```text
 <VirtualHost *:80>
     ServerName test.loc
     DocumentRoot /media/sf_public/test.loc/
@@ -269,19 +269,19 @@ sudo nano test.loc.conf
 
 Регистрируем домен:
 
-```
+```bash
 sudo a2ensite test.loc
 ```
 
 Перезапускаем сервер:
 
-```
+```bash
 service apache2 restart
 ```
 
 На машине host добавляем домен (127.0.0.1 test.loc) в конец файла:
 
-```
+```bash
 sudo nano /etc/hosts
 ```
 
