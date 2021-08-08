@@ -3,7 +3,6 @@
  * Скрипт предназначен для авторизации
  * под админом
  */
-
 define('ENV_DEBUG', true);
 define('NO_KEEP_STATISTIC', true);
 define('NOT_CHECK_PERMISSIONS', true);

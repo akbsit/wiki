@@ -8,6 +8,7 @@ function echoBr()
 /**
  * @param $sDate
  * @param $sSol
+ *
  * @return string
  */
 function getBitrixExpireDate($sDate, $sSol)
@@ -29,6 +30,7 @@ function getBitrixExpireDate($sDate, $sSol)
 
 /**
  * @param $sMessage
+ *
  * @return string
  */
 function showSuccessMessage($sMessage)
@@ -38,6 +40,7 @@ function showSuccessMessage($sMessage)
 
 /**
  * @param $sMessage
+ *
  * @return string
  */
 function showErrorMessage($sMessage)
@@ -69,9 +72,7 @@ function rmDirRecursive($sDir)
  * Скрипт предназначен для продления
  * демонстрационной версии сайта
  */
-
 $sRequestUri = $_SERVER['REQUEST_URI'];
-
 if ($sRequestUri !== strtolower($sRequestUri)) {
     header('Location: ' . strtolower($sRequestUri));
 }
@@ -79,7 +80,6 @@ if ($sRequestUri !== strtolower($sRequestUri)) {
 /**
  * 1. Подготавливаем новые ключи
  */
-
 $sSolForFile = 'DO_NOT_STEAL_OUR_BUS';
 $sSolForDB = 'thRH4u67fhw87V7Hyr12Hwy0rFr';
 
@@ -95,9 +95,7 @@ $sKeyForDB = base64_encode(getBitrixExpireDate($sCodeDateForDB, $sSolForDB));
  * 2. Обновляем TEMPORARY_CACHE
  * в файле /bitrix/modules/main/admin/define.php
  */
-
 $sPathDefine = '/bitrix/modules/main/admin/define.php';
-
 if (file_put_contents($_SERVER['DOCUMENT_ROOT'] . $sPathDefine, '<?define("TEMPORARY_CACHE", "' . $sKeyForFile . '");?>')) {
     echo(showSuccessMessage('Файл ' . $sPathDefine . ' обновлен: TEMPORARY_CACHE=' . $sKeyForFile));
     echoBr();
@@ -109,11 +107,9 @@ if (file_put_contents($_SERVER['DOCUMENT_ROOT'] . $sPathDefine, '<?define("TEMPO
  * 3. Обновляем поле admin_passwordh
  * в таблице b_option
  */
-
 require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/dbconn.php';
 
 $oConnection = new mysqli($DBHost, $DBLogin, $DBPassword, $DBName);
-
 if ($oConnection->connect_error) {
     die(showErrorMessage('При подключение к базе данных произошла ошибка: ' . $oConnection->connect_error));
 }
@@ -130,7 +126,6 @@ $oConnection->close();
 /**
  * 4. Очищаем кэш
  */
-
 $sPathCache = $_SERVER['DOCUMENT_ROOT'] . '/bitrix/cache/';
 $sPathManagedCache = $_SERVER['DOCUMENT_ROOT'] . '/bitrix/managed_cache/';
 
