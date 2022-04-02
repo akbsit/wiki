@@ -50,5 +50,7 @@
 * Laravel:
     * [view-sql.php](.docs/laravel/view-sql.php) - скрипт предназначен просмотр SQL запросов.
 * PHP:
-    * [Сортировка многомерного массива](.docs/php/array-multisort.md);
-* [Регулярные выражения](.docs/regexp/regexp.md);
+    * [Сортировка многомерного массива](.docs/php/array-multisort.md).
+* Python:
+    * [Книги](.docs/python/books.md).
+* [Регулярные выражения](.docs/regexp/regexp.md).
