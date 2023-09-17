@@ -1,13 +1,13 @@
-# Просмотр коммитов
+# View commits
 
-Показать все коммиты:
+Show all commits:
 
 ```bash
 git log
 ```
 
-Показать <число> последних коммитов:
+Show <number> of recent commits:
 
 ```bash
-git log -<число>
+git log -<number>
 ```

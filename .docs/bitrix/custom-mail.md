@@ -1,27 +1,25 @@
-# Переопределение кастомной отправки почты через SMTP
+# Overriding custom mail sending via SMTP
 
-Устанавливаем пакет PHPMailer для работы с SMTP:
+Install the PHPMailer package to work with SMTP:
 
 ```bash
 composer require phpmailer/phpmailer
 ```
 
-Добавляем код, который переопределит стандартный `custom_mail` на следующий:
+Add code that will override the standard `custom_mail` to the following:
 
 ```php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 /**
- * Отпраляем почту через SMTP-сервер
- *
  * @see CEvent::HandleEvent()
  * @see bxmail()
  *
- * @param string $sTo Адрес получателя
- * @param string $sSubject Тема
- * @param string $sMessage Текст сообщения
- * @param string $sAdditionalHeaders Дополнительные заголовки передаются Битриксом почти всегда ('FROM' передаётся здесь)
+ * @param string $sTo
+ * @param string $sSubject
+ * @param string $sMessage
+ * @param string $sAdditionalHeaders
  *
  * @return bool
  * @throws Exception
@@ -30,16 +28,16 @@ function custom_mail($sTo, $sSubject, $sMessage, $sAdditionalHeaders = '')
 {
     $oMail = new PHPMailer;
 
-    $oMail->SMTPDebug = 0; // логирование ошибок (0 - не выводить, 2 - выводить)
+    $oMail->SMTPDebug = 0;
     $oMail->CharSet = 'UTF-8';
     $oMail->isSMTP();
     $oMail->SMTPAuth = true;
 
-    $oMail->Host = ''; // пример: smtp.yandex.ru
-    $oMail->Username = ''; // пример: noreplyb@mail.com
-    $oMail->Password = ''; // пример: login
-    $oMail->SMTPSecure = ''; // пример: ssl
-    $oMail->Port = 0; // пример: 465
+    $oMail->Host = '';
+    $oMail->Username = '';
+    $oMail->Password = '';
+    $oMail->SMTPSecure = '';
+    $oMail->Port = 0;
 
     $sDMessage = '';
 

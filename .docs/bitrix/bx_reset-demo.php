@@ -69,8 +69,7 @@ function rmDirRecursive($sDir)
 }
 
 /**
- * Скрипт предназначен для продления
- * демонстрационной версии сайта
+ * Script is intended to extend the demo version of the site
  */
 $sRequestUri = $_SERVER['REQUEST_URI'];
 if ($sRequestUri !== strtolower($sRequestUri)) {
@@ -78,7 +77,7 @@ if ($sRequestUri !== strtolower($sRequestUri)) {
 }
 
 /**
- * 1. Подготавливаем новые ключи
+ * 1. Prepare new keys
  */
 $sSolForFile = 'DO_NOT_STEAL_OUR_BUS';
 $sSolForDB = 'thRH4u67fhw87V7Hyr12Hwy0rFr';
@@ -92,56 +91,56 @@ $sKeyForFile = base64_encode(getBitrixExpireDate($sCodeDateForFile, $sSolForFile
 $sKeyForDB = base64_encode(getBitrixExpireDate($sCodeDateForDB, $sSolForDB));
 
 /**
- * 2. Обновляем TEMPORARY_CACHE
- * в файле /bitrix/modules/main/admin/define.php
+ * 2. Update TEMPORARY_CACHE
+ * in file /bitrix/modules/main/admin/define.php
  */
 $sPathDefine = '/bitrix/modules/main/admin/define.php';
 if (file_put_contents($_SERVER['DOCUMENT_ROOT'] . $sPathDefine, '<?define("TEMPORARY_CACHE", "' . $sKeyForFile . '");?>')) {
-    echo(showSuccessMessage('Файл ' . $sPathDefine . ' обновлен: TEMPORARY_CACHE=' . $sKeyForFile));
+    echo(showSuccessMessage('File ' . $sPathDefine . ' updated: TEMPORARY_CACHE=' . $sKeyForFile));
     echoBr();
 } else {
-    die(showErrorMessage('Не удалось обновить ' . $sPathDefine . ' файл'));
+    die(showErrorMessage('Failed to update ' . $sPathDefine . ' file'));
 }
 
 /**
- * 3. Обновляем поле admin_passwordh
- * в таблице b_option
+ * 3. Update field admin_passwordh
+ * in table b_option
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/dbconn.php';
 
 $oConnection = new mysqli($DBHost, $DBLogin, $DBPassword, $DBName);
 if ($oConnection->connect_error) {
-    die(showErrorMessage('При подключение к базе данных произошла ошибка: ' . $oConnection->connect_error));
+    die(showErrorMessage('An error occurred while connecting to the database: ' . $oConnection->connect_error));
 }
 
 if ($oConnection->query("UPDATE `b_option` SET `VALUE`='" . $sKeyForDB . "' WHERE `NAME`='admin_passwordh'")) {
-    echo(showSuccessMessage('Обновлено поле admin_passwordh в таблице b_option: admin_passwordh=' . $sKeyForDB));
+    echo(showSuccessMessage('Updated field admin_passwordh in table b_option: admin_passwordh=' . $sKeyForDB));
     echoBr();
 } else {
-    die(showErrorMessage('При обновлении поля admin_passwordh произошла ошибка: ' . $oConnection->error));
+    die(showErrorMessage('When updating a field admin_passwordh error has occurred: ' . $oConnection->error));
 }
 
 $oConnection->close();
 
 /**
- * 4. Очищаем кэш
+ * 4. Clearing the cache
  */
 $sPathCache = $_SERVER['DOCUMENT_ROOT'] . '/bitrix/cache/';
 $sPathManagedCache = $_SERVER['DOCUMENT_ROOT'] . '/bitrix/managed_cache/';
 
 if (file_exists($sPathCache) && is_dir($sPathCache)) {
     rmDirRecursive($sPathCache);
-    echo(showSuccessMessage('Папка с кэшем ' . $sPathCache . ' очищена'));
+    echo(showSuccessMessage('Cache folder ' . $sPathCache . ' cleared'));
     echoBr();
 }
 
 if (file_exists($sPathManagedCache) && is_dir($sPathManagedCache)) {
     rmDirRecursive($sPathManagedCache);
-    echo(showSuccessMessage('Папка с кэшем ' . $sPathManagedCache . ' очищена'));
+    echo(showSuccessMessage('Cache folder ' . $sPathManagedCache . ' cleared'));
     echoBr();
 }
 ?>
 
 <a href="/">
-    Вернуться на главную
+    Go back to the main page
 </a>

@@ -1,19 +1,19 @@
-# Общие команды
+# General commands
 
-Клонировать репозиторий в папку:
+Clone the repository into a folder:
 
 ```bash
-git clone <адрес> <путь>
+git clone <address> <path>
 ```
 
-Создать новый проект в текущей папке:
+Create a new project in the current folder:
 
 ```bash
 git init
 ```
 
-Создать новый проект в указанной папке:
+Create a new project in the specified folder:
 
 ```bash
-git init <папка>
+git init <folder>
 ```

@@ -1,12 +1,12 @@
-# SQL команды
+# SQL commands
 
-Список баз данных:
+List of databases:
 
 ```sql
 SHOW DATABASES;
 ```
 
-Посмотреть пользователей MySQL:
+View MySQL users:
 
 ```sql
 SELECT user, host FROM mysql.user;

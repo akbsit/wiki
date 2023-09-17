@@ -1,85 +1,85 @@
-# Общие команды
+# General commands
 
-## Файловая система
+## File system
 
-Просмотреть файловую систему:
+View file system:
 
 ```bash
 df -h
 ```
 
-Просмотреть содержимое директории:
+View directory contents:
 
 ```bash
 ls -lQa
 ```
 
-Просмотреть память:
+View memory:
 
 ```bash
 free
 ```
 
-## Сеть
+## Net
 
-Просмотреть сетевое подключение:
+View network connection:
 
 ```bash
 ifconfig
 ```
 
-## Остальные
+## Others
 
-Просмотреть список заданий:
+View list of tasks:
 
 ```bash
 jobs
 ```
 
-Залогиниться под root:
+Login as root:
 
 ```bash
 sudo su -
 ```
 
-Посмотреть установленные модули:
+View installed modules:
 
 ```bash
 lsmod
 ```
 
-Просмотреть описание модуля:
+View module description:
 
 ```bash
-modinfo <модуль>
+modinfo <module>
 ```
 
-Просмотреть настройки системы:
+View system settings:
 
 ```bash
 cat /proc/cpuinfo
 cat /proc/mounts
 ```
 
-Просмотреть список сигналов:
+View list of signals:
 
 ```bash
 kill -l
 ```
 
-Просмотреть набранные команды:
+View typed commands:
 
 ```bash
 history
 ```
 
-Выполнить команду из списка истории:
+Execute the command from the history list:
 
 ```bash
-history <номер>
+history <number>
 ```
 
-Просмотреть данные по процессам:
+View process data:
 
 ```bash
 ps auxwww
@@ -88,15 +88,15 @@ vmstat
 vmstat 3
 ```
 
-Просмотреть справочную информацию по команде:
+View command help:
 
 ```bash
-man <команда>
-man <раздел> <команда|файл>
+man <command>
+man <section> <command|file>
 ```
 
-Показать команду и исполнить:
+Show command and execute:
 
 ```bash
-!<номер>
+!<number>
 ```

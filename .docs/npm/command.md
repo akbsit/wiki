@@ -1,25 +1,25 @@
-# NPM команды
+# NPM commands
 
-Просмотреть глобально установленные пакеты:
+View globally installed packages:
 
 ```bash
 npm ls -g --depth=0
 ```
 
-Просмотреть локально установленные пакеты:
+View locally installed packages:
 
 ```bash
 npm ls --depth=0
 ```
 
-Установить пакет:
+Install package:
 
 ```bash
-npm i <пакет>
+npm i <package>
 ```
 
-Установить пакет глобально:
+Install the package globally:
 
 ```bash
-npm i <пакет> -g
+npm i <package> -g
 ```

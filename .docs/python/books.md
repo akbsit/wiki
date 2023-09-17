@@ -1,3 +1,3 @@
-# Книги
+# Books
 
-* [Python подробный справочник](https://disk.yandex.ru/i/BIPh1rRwUb5QWw).
+* [Python detailed reference](https://disk.yandex.ru/i/BIPh1rRwUb5QWw).

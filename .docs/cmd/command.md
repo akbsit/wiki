@@ -1,42 +1,42 @@
-# CMD команды
+# CMD commands
 
-Обмен пакетами с ресурсом:
+Exchange packages with a resource:
 
 ```bash
 ping <адрес>
 ```
 
-Трассировка маршрута к ресурсу:
+Trace route to resource:
 
 ```bash
 trcert <адрес>
 ```
 
-Узнать адрес ресурса:
+Find out the resource address:
 
 ```bash
 nslookup <адрес>
 ```
 
-Настройки протокола IP для Windows:
+IP protocol settings for Windows:
 
 ```bash
 ipconfig
 ```
 
-DNS записи:
+DNS records:
 
 ```bash
 ipconfig /displaydns
 ```
 
-Очистить кэш сопоставителя DNS:
+Clear DNS resolver cache:
 
 ```bash
 ipconfig /flushdns
 ```
 
-Активные подключения:
+Active connections:
 
 ```bash
 netstat -ano

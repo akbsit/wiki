@@ -1,24 +1,24 @@
-# Phinx команды
+# Phinx teams
 
-Создать миграцию:
+Create migration:
 
 ```bash
-php vendor\bin\phinx create <НазваниеМиграции>
+php vendor\bin\phinx create <MigrationName>
 ```
 
-Применить миграцию:
+Apply migration:
 
 ```bash
 php vendor\bin\phinx migrate
 ```
 
-Откатить миграцию:
+Rollback migration:
 
 ```bash
 php vendor\bin\phinx rollback
 ```
 
-Откатить все миграции:
+Roll back all migrations:
 
 ```bash
 php vendor\bin\phinx rollback -t 0

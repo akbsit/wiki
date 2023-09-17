@@ -1,6 +1,6 @@
-# Настройка GIT hook pre-push для отправки в несколько репозиториев
+# Setting up a GIT hook pre-push to push to multiple repositories
 
-Необходимо в локальном репозитории в папке `.git/hooks` создать файл `pre-push` со следующим содержимым:
+It is necessary to create a `pre-push` file with the following contents in the local repository in the `.git/hooks` folder:
 
 ```bash
 #!/bin/sh
@@ -9,20 +9,20 @@ remote="$1"
 url="$2"
 current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
-if [ $remote != <название репозитория> ]
+if [ $remote != <repository name> ]
 then
-    echo "Command: git push <название репозитория>" $current_branch
-    git push <название репозитория> $current_branch
-    echo ""
+     echo "Command: git push <repository name>" $current_branch
+     git push <repository name> $current_branch
+     echo ""
 fi
 
 exit 0
 ```
 
-Далее нужно добавить удалённый репозиторий:
+Next you need to add a remote repository:
 
 ```bash
-git remote add <название репозитория> <ссылка на удалённый репозиторий>
+git remote add <repository name> <link to remote repository>
 ```
 
-> Сокращённое название удалённого репозитория обязательно должно называться `<название репозитория>`. Иначе pre-push не сработает.
+> The abbreviated name of the remote repository must be called `<repository name>`. Otherwise, pre-push will not work.

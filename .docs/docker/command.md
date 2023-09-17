@@ -1,55 +1,55 @@
-# Docker команды
+# Docker commands
 
-## Общие
+## Common
 
-Перезапуск главного сервиса:
+Restarting the main service:
 
 ```bash
 service docker restart
 ```
 
-## Контейнера
+## Container
 
-Удалить все остановленные контейнера:
+Delete all stopped containers:
 
 ```bash
 docker container prune -f
 ```
 
-Принудительно удалить все контейнеры, включая запущенные контейнеры:
+Forcefully delete all containers, including running containers:
 
 ```bash
 docker rm -f $(docker ps -a -q)
 ```
 
-Просмотр нагрузки:
+View load:
 
 ```bash
 docker ps -q | xargs docker stats
 docker ps -q | xargs docker stats --no-stream
 ```
 
-## Образы
+## Images
 
-Посмотреть все оброзы:
+View all images:
 
 ```bash
 docker image ls -a
 ```
 
-Образы Docker состоят из нескольких уровней. Недействительные образы – это уровень образов, которые больше не имеют никакого отношения к образам с метками. Они впустую потребляют дисковое пространство:
+Docker images consist of several layers. Invalid images are the level of images that no longer have any relation to the tagged images. They waste disk space:
 
 ```bash
 docker images -f dangling=true
 ```
 
-Удалить недействительные образы:
+Remove invalid images:
 
 ```bash
 docker rmi $(docker images -f dangling=true -q)
 ```
 
-Удалить все неиспользуемые образы:
+Delete all unused images:
 
 ```bash
 docker image prune -a -f

@@ -1,42 +1,42 @@
-# Полезные команды
+# Useful commands
 
-Просмотр IP:
+View IP:
 
 ```bash
 ifconfig | grep "inet " | grep -v 127.0.0.1
 ```
 
-Узнать установление пакеты PHP:
+Find out how to install PHP packages:
 
 ```bash
-dpkg --get-selections | grep -v deinstall | grep php<версия>
+dpkg --get-selections | grep -v deinstall | grep php<version>
 ```
 
-Очистить папку:
+Clear folder:
 
 ```bash
-rm -rf <путь до папки>/*
+rm -rf <path to folder>/*
 ```
 
-Выполнение PHP скрипта с настройками (пример):
+Executing a PHP script with settings (example):
 
 ```bash
 php -d short_open_tag=On vendor/bin/phinx status
 ```
 
-Узнать размеры файлов в текущей папке:
+Find out the file sizes in the current folder:
 
 ```bash
 du -sh *
 ```
 
-Сменить для папки владельца:
+Change for owner folder:
 
 ```bash
-sudo chown -R <пользователь> <путь до папки>
+sudo chown -R <user> <path to folder>
 ```
 
-Очистить почту:
+Clear mail:
 
 ```bash
 mail -N
@@ -44,19 +44,19 @@ d *
 quit
 ```
 
-Найти запущенный процесс (занятый порт):
+Find running process (busy port):
 
 ```bash
 lsof -i tcp:<port>
 ```
 
-Посмотреть открытые порты:
+View open ports:
 
 ```bash
 sudo lsof -PiTCP -sTCP:LISTEN
 ```
 
-Убить процесс с помощью его id
+Kill a process using its id
 
 ```bash
 kill -9 <id>

@@ -1,63 +1,63 @@
-# Работа с ветками
+# Working with branches
 
-Список локальных веток:
+List of local branches:
 
 ```bash
 git branch
 ```
 
-Создать новую ветку с указанным именем:
+Create a new branch with the specified name:
 
 ```bash
-git branch <название>
+git branch <name>
 ```
 
-Удалить ветку:
+Delete branch:
 
 ```bash
-git branch -d <название>
+git branch -d <name>
 ```
 
-Удалить remote ветку:
+Delete remote branch:
 
 ```bash
-git push -d <remote> <название>
+git push -d <remote> <name>
 ```
 
-> Удаляет ветвь только в том случае, если она уже полностью объединена в своей ветке вверх по течению
+> Only deletes a branch if it is already fully merged in its upstream branch
 
 ```bash
-git push --delete --force <remote> <название>
+git push --delete --force <remote> <name>
 ```
 
-> Удаляет независимо от ее объединенного состояния
+>Deletes regardless of its merged state
 
-Показать все имеющиеся ветки (в т.ч. на удаленных репозиториях):
+Show all available branches (including those on remote repositories):
 
 ```bash
 git branch -a
 ```
 
-Показать список веток и последний коммит в каждой:
+Show a list of branches and the latest commit in each:
 
 ```bash
 git branch -v
 ```
 
-Перейти в указанную ветку:
+Go to the specified branch:
 
 ```bash
-git checkout <название>
+git checkout <name>
 ```
 
-Создать новую ветку с указанным именем и перейти в неё:
+Create a new branch with the specified name and move to it:
 
 ```bash
-git checkout -b <название>
+git checkout -b <name>
 ```
 
-Откатить изменения в файле:
+Rollback changes to a file:
 
 ```bash
-git checkout -- <название>
+git checkout -- <name>
 ```

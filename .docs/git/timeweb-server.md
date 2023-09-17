@@ -1,41 +1,41 @@
-# Настройка GIT на сервере (на примере timeweb)
+# Setting up GIT on the server (using timeweb as an example)
 
-Заходим на сервер через SSH:
+Login to the server via SSH:
 
 ```bash
-ssh <пользователь>@<сервер>.timeweb.ru
+ssh <user>@<server>.timeweb.ru
 ```
 
-Заходим в папку проекта, для примера <example.com>, и инициализируем там репозиторий:
+We go to the project folder, for example <example.com>, and initialize the repository there:
 
 ```bash
 cd <example.com>
 git init
 ```
 
-Установка настроек для GIT на сервере (если до этого не было):
+Setting the settings for GIT on the server (if not already done):
 
 ```bash
-git config --global user.name "<Имя Фамилия>"
+git config --global user.name "<First Name Last Name>"
 git config --global user.email <example@mail.com>
 ```
 
-Проверка настроек:
+Checking settings:
 
 ```bash
 git config --list
 ```
 
-Если папка с проектом пуста, то добавляем произвольный файл (например .gitignore)
+If the project folder is empty, then add an arbitrary file (for example .gitignore)
 
-Делаем первый коммит:
+Let's make the first commit:
 
 ```bash
 git add .
 git commit -m "init"
 ```
 
-Создаем в корне папку git и переходим в нее:
+Create a git folder in the root and go to it:
 
 ```bash
 cd ~
@@ -43,20 +43,20 @@ mkdir git
 cd git
 ```
 
-Инициализируем bare-репозиторий:
+Initialize the bare repository:
 
 ```bash
 git clone --bare ../<example.com> <example.com>.git
 ```
 
-Возвращаемся в папку проекта и настраиваем remote для проекта:
+We return to the project folder and configure remote for the project:
 
 ```bash
 cd ~/<example.com>
 git remote add origin ../git/<example.com>.git
 ```
 
-Добавляем хук post-update в bare-репозиторий и устанавливаем нужные права на файл:
+Add the post-update hook to the bare repository and set the necessary file permissions:
 
 ```bash
 cd ~/git/<example.com>.git/hooks
@@ -65,7 +65,7 @@ cd ~/git/<example.com>.git/hooks
 ```bash
 #!/bin/sh
 
-cd /home/<первая буква пользователя>/<пользователь>/<example.com> || exit
+cd /home/<first letter of user>/<user>/<example.com> || exit
 unset GIT_DIR
 git pull origin master
 
@@ -76,7 +76,7 @@ exec git-update-server-info
 chmod +x post-update
 ```
 
-Добавляем хук post-commit в репозиторий проекта:
+Add a post-commit hook to the project repository:
 
 ```bash
 cd ~/<example.com>/.git/hooks
@@ -91,19 +91,19 @@ git push origin
 chmod +x post-commit
 ```
 
-Возвращаемся в папку проекта и пушимся:
+We return to the project folder and push:
 
 ```bash
 cd ~/<example.com>
 git push --set-upstream shared master
 ```
 
-Теперь можно клонировать себе на ПК:
+Now you can clone it on your PC:
 
 ```bash
-git clone ssh://<пользователь>@<сервер>.timeweb.ru/home/<первая буква пользователя>/<пользователь>/<example.com>/git/<example.com>.git ./
+git clone ssh://<user>@<server>.timeweb.ru/home/<first letter of user>/<user>/<example.com>/git/<example.com>.git ./
 ```
 
-> Работа происходит как с обычным GIT репозиторием
+> Work occurs as with a regular GIT repository
 
-> Продакшн является master веткой
+> Production is the master branch

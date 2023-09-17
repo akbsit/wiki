@@ -1,7 +1,6 @@
 <?php
 /**
- * Скрипт предназначен для авторизации
- * под админом
+ * Script is intended for authorization as an administrator
  */
 define('ENV_DEBUG', true);
 define('NO_KEEP_STATISTIC', true);

@@ -1,6 +1,6 @@
 <?php
 /**
- * Скрипт для просмотра SQL запросов
+ * Script for viewing SQL queries
  */
 use Illuminate\Support\Facades\DB;
 

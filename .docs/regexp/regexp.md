@@ -1,20 +1,20 @@
-# Регулярные выражения
+# Regular expressions
 
-Ограничение конструкции `(.+?)`:
+Limitation of the `(.+?)` construct:
 
 ```regexp
 /\[url=\"([^\s"]+?)\"\](.+?)\[\/url\]/s
 ```
 
-Проверка отсутствия последнего символа в строке:
+Checking the absence of the last character in a string:
 
 ```regexp
 ^(?!-)(?!.*--)[a-z0-9-]+(?<!-)$
 ```
 
-> [ссылка на источник решения](https://stackoverflow.com/questions/4897353/regex-to-disallow-more-than-1-dash-consecutively)
+> [link to solution source](https://stackoverflow.com/questions/4897353/regex-to-disallow-more-than-1-dash-consecutively)
 
-Получение в строке первого предложения:
+Getting in line the first sentence:
 
 ```regexp
 /^[^.]+/

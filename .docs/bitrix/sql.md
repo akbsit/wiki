@@ -1,6 +1,6 @@
-# Сгенерированный SQL запрос, D7
+# Generated SQL query, D7
 
-Пример:
+Example:
 
 ```php
 use \Bitrix\Main\Application;
@@ -27,10 +27,8 @@ if (Loader::includeModule('iblock')) {
 ```
 
 ```sql
-SELECT 
-    `iblock_section`.`ID` AS `ID`
-FROM `b_iblock_section` `iblock_section` 
- 
+SELECT `iblock_section`.`ID` AS `ID`
+FROM `b_iblock_section` `iblock_section`
 WHERE `iblock_section`.`IBLOCK_SECTION_ID` = 12
-AND `iblock_section`.`IBLOCK_ID` = 12
+  AND `iblock_section`.`IBLOCK_ID` = 12
 ```

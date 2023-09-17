@@ -1,24 +1,24 @@
-# Настройка SSH подключения (на примере timeweb)
+# Setting up an SSH connection (using timeweb as an example)
 
-Если на ПК нет SSH, то генерируем ключи:
+If there is no SSH on the PC, then we generate keys:
 
 ```bash
 ssh-keygen
 ```
 
-Первый способ (копируем SSH ключ на сервер):
+First method (copy the SSH key to the server):
 
 ```bash
-ssh-copy-id -i ~/.ssh/id_rsa <пользователь>@<сервер>.timeweb.ru
+ssh-copy-id -i ~/.ssh/id_rsa <user>@<server>.timeweb.ru
 ```
 
-Второй способ (копируем SSH ключ на сервер):
+Second method (copy the SSH key to the server):
 
 ```bash
-scp ~/.ssh/id_rsa.pub <пользователь>@<сервер>.timeweb.ru:~
+scp ~/.ssh/id_rsa.pub <user>@<server>.timeweb.ru:~
 ```
 
-Третий способ (на сервере, если ключ лежит в корне):
+Third method (on the server, if the key is in the root):
 
 ```bash
 [ -d ~/.ssh ] || (mkdir ~/.ssh; chmod 700 ~/.ssh)

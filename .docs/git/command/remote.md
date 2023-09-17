@@ -1,19 +1,19 @@
-# Работа с удаленными репозиториями
+# Working with remote repositories
 
-Показать список удалённых репозиториев:
+Show a list of remote repositories:
 
 ```bash
 git remote
 ```
 
-Показать список удалённых репозиториев, связанных с этим:
+Show a list of remote repositories associated with this:
 
 ```bash
 git remote -v
 ```
 
-Залить ветку в удаленный репозиторий:
+Upload a branch to a remote repository:
 
 ```bash
-git push origin <название ветки>:<название локальной ветки>
+git push origin <branch name>:<local branch name>
 ```

@@ -1,6 +1,6 @@
-# Работа с тегами
+# Working with tags
 
-Отправить все теги в репозиторий:
+Push all tags to the repository:
 
 ```bash
 git push origin --tags

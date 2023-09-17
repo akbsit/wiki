@@ -1,13 +1,13 @@
-# Добавление файлов к отслеживанию
+# Adding files to tracking
 
-Добавить к отслеживанию все новые файлы из текущей папки и её подпапок, индексировать отслеживаемые файлы:
+Add to tracking all new files from the current folder and its subfolders, index the monitored files:
 
 ```bash
 git add .
 ```
 
-Добавить к отслеживанию этот существующий файл:
+Add this existing file to tracking:
 
 ```bash
-git add <файл>
+git add <file>
 ```

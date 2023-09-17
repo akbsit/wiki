@@ -1,20 +1,20 @@
-# Работа с коммитами
+# Working with commits
 
-Закоммитить отслеживаемые индексированные файлы:
+Commit tracked indexed files:
 
 ```bash
-git commit -m "<комментарий>"
+git commit -m "<comment>"
 ```
 
-Добавить к отслеживанию все новые файлы и закоммитить:
+Add all new files to the tracking and commit:
 
 ```bash
-git commit -am "<комментарий>"
+git commit -am "<comment>"
 ```
 
-Отредактировать последний коммит и перезаписать его:
+Edit the last commit and overwrite it:
 
 ```bash
-git commit --amend -m "<комментарий>"
+git commit --amend -m "<comment>"
 git push --force
 ```

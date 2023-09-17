@@ -1,12 +1,12 @@
-# Настройка миграций через Phinx
+# Setting up migrations via Phinx
 
-Для установки Phinx в консоли вводим в папке `/local/`:
+To install Phinx in the console, enter in the `/local/` folder:
 
 ```bash
 composer require robmorgan/phinx
 ```
 
-Создаем в папке `/local/` файл `phinx.php`, со следующим содержимым:
+Create a file `phinx.php` in the `/local/` folder with the following contents:
 
 ```php
 <?php
@@ -54,7 +54,7 @@ try {
 }
 ```
 
-Пример создания миграции (метод `up()`) с учетом транзакции:
+An example of creating a migration (the `up()` method) taking into account a transaction:
 
 ```php
 /**

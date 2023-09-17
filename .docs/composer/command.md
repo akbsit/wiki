@@ -1,13 +1,7 @@
-# Composer команды
+# Composer commands
 
-Обновить зависимости в autoload:
+Update dependencies in autoload:
 
 ```bash
 composer dump-autoload -o
-```
-
-Удалить пакет:
-
-```bash
-composer remove <название пакета>
 ```

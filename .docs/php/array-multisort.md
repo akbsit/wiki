@@ -1,4 +1,4 @@
-# Сортировка многомерного массива
+# Sort a multidimensional array
 
 ```php
 function arrayMultiSortValue(): array
@@ -25,7 +25,7 @@ function arrayMultiSortValue(): array
 }
 ```
 
-Пример:
+Example:
 
 ```php
 $arArray = [

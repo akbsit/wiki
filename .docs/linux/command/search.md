@@ -1,13 +1,13 @@
-# Поиск
+# Search
 
-Поиск файла в папке:
+Searching for a file in a folder:
 
 ```bash
-find <путь до папки> -name "<имя файла>"
+find <path to folder> -name "<file name>"
 ```
 
-Поиск в файлах строки:
+Search in files for string:
 
 ```bash
-grep -r "<строка>" <путь до папки>
+grep -r "<line>" <path to folder>
 ```

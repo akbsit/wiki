@@ -1,12 +1,12 @@
-# Полезные программы
+# Useful programs
 
-Монитор процессов:
+Process Monitor:
 
 ```bash
 sudo apt install htop
 ```
 
-Консольный файловый менеджер:
+Console file manager:
 
 ```bash
 sudo apt install mc

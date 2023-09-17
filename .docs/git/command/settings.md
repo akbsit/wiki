@@ -1,13 +1,13 @@
-# Настройки
+# Settings
 
-Установить глобальные настройки:
+Set global settings:
 
 ```bash
-git config --global user.name "<Имя Фамилия>"
+git config --global user.name "<First Name Last Name>"
 git config --global user.email <example@mail.com>
 ```
 
-Список настроек:
+List of settings:
 
 ```bash
 git config --list
