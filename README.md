@@ -5,13 +5,13 @@ A useful set of commands, books, manuals, training manuals.
 ## Sections
 
 * SQL:
-* [SQL commands](.docs/sql/command.md).
+  * [SQL commands](.docs/sql/command.md).
 * Composer:
-* [Composer commands](.docs/composer/command.md).
+  * [Composer commands](.docs/composer/command.md).
 * NPM:
-* [NPM commands](.docs/npm/command.md).
+  * [NPM commands](.docs/npm/command.md).
 * CMD:
-* [CMD commands](.docs/cmd/command.md).
+  * [CMD commands](.docs/cmd/command.md).
 * Phinx:
     * [Phinx commands](.docs/phinx/command.md).
 * GIT:
